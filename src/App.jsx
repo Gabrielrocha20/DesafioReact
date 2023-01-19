@@ -30,15 +30,14 @@ export default function LoginForm() {
   const handlePassword = (e) => {
     setPassword(e.target.value)
   }
-  const  handleValidator =  () => {
+  const handleValidator =  () => {
     login(user).then(console.log).catch(async err => {
        const erro = await err
        setErro(erro)
       })
 
     setTimeout(function() {
-      console.log('tatata')
-      setErro("None")
+      setErro("")
     }, 3000)
   }
 
